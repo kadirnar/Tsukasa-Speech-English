@@ -13,16 +13,20 @@ tags:
 - '#speech'
 - '#StyleTTS2'
 ---
+
+![Logo](https://i.postimg.cc/y6gT18Tn/Untitled-design-1.png)
+
+
 # Tsukasa 司 Speech: Engineering the Naturalness and Rich Expressiveness 
 
 **tl;dr** : I made a very cool japanese speech generation model.
 
 Part of a [personal project](https://github.com/Respaired/Project-Kanade), focusing on further advancing Japanese speech field. 
 
-Use the HuggingFace Space for **Tsukasa** (24khz): [![huggingface](https://img.shields.io/badge/Interactive_Demo-HuggingFace-yellow)](https://huggingface.co/spaces/Respair/Shiki)
-HuggingFace Space for **Tsumugi** (48khz): [![huggingface](https://img.shields.io/badge/Interactive_Demo-HuggingFace-yellow)](https://huggingface.co/spaces/Respair/Shiki)
+- Use the HuggingFace Space for **Tsukasa** (24khz): [![huggingface](https://img.shields.io/badge/Interactive_Demo-HuggingFace-yellow)](https://huggingface.co/spaces/Respair/Shiki)
+- HuggingFace Space for **Tsumugi** (48khz): [![huggingface](https://img.shields.io/badge/Interactive_Demo-HuggingFace-yellow)](https://huggingface.co/spaces/Respair/Shiki)
 
-Join Shoukan lab's discord server, a comfy place I frequently visit -> [![Discord](https://img.shields.io/discord/1197679063150637117?logo=discord&logoColor=white&label=Join%20our%20Community)](https://discord.gg/JrPSzdcM)
+- Join Shoukan lab's discord server, a comfy place I frequently visit -> [![Discord](https://img.shields.io/discord/1197679063150637117?logo=discord&logoColor=white&label=Join%20our%20Community)](https://discord.gg/JrPSzdcM)
 
 ## What is this?
 
