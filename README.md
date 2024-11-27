@@ -95,6 +95,18 @@ or check the inference notebook. before that, make sure you read the **Important
 
 # Training:
 
+## Pre-requisites
+1. Python >= 3.11
+2. Clone this repository:
+```bash
+git clone https://huggingface.co/Respair/Tsukasa_Speech
+cd Tsukasa_Speech
+```
+3. Install python requirements: 
+```bash
+pip install -r requirements.txt
+```
+
 **First stage training**:
 ```bash
 accelerate launch train_first.py --config_path ./Configs/config.yml
@@ -127,17 +139,6 @@ I can think of a few things that can be improved, not nessarily by me, treat it 
 - [o] while the quality of non-speech sounds have been improved, it cannot generate an entirely non-speech output, perhaps because of the hard alignement.
 - [o] using the Style encoder as another modality in LLMs, since they have a detailed representation of the tone and expression of a speech (similar to Style-Talker).
 
-## Pre-requisites
-1. Python >= 3.11
-2. Clone this repository:
-```bash
-git clone https://huggingface.co/Respair/Tsukasa_Speech
-cd Tsukasa_Speech
-```
-3. Install python requirements: 
-```bash
-pip install -r requirements.txt
-```
 
 ## Training details
 
