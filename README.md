@@ -15,7 +15,7 @@ tags:
 ---
 # Tsukasa 司 Speech: Engineering the Naturalness and Rich Expressiveness 
 
-**tl;dr** : I made a very cool japanese speech model.
+**tl;dr** : I made a very cool japanese speech generation model.
 
 Part of a [personal project](https://github.com/Respaired/Project-Kanade), focusing on further advancing Japanese speech field. 
 
