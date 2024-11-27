@@ -1,3 +1,29 @@
+---
+thumbnail: https://i.postimg.cc/y6gT18Tn/Untitled-design-1.png
+license: cc-by-nc-4.0
+language:
+- ja
+pipeline_tag: text-to-speech
+tags:
+- '#StyleTTS'
+- '#Japanese'
+- Diffusion
+- Prompt
+- '#TTS'
+- '#TexttoSpeech'
+- '#speech'
+- '#StyleTTS2'
+---
+
+<div style="text-align:center;">
+  <img src="https://i.postimg.cc/y6gT18Tn/Untitled-design-1.png" alt="Logo" style="width:300px; height:auto;">
+</div>
+
+
+# Tsukasa 司 Speech: Engineering the Naturalness and Rich Expressiveness 
+
+**tl;dr** : I made a very cool japanese speech generation model.
+
 [個人プロジェクト](https://github.com/Respaired/Project-Kanade)の一部で、日本語Speech分野のさらなる発展に焦点を当てています。 
 
 - **Tsukasa** (24kHz)のHuggingFaceスペースを使用してください: [![huggingface](https://img.shields.io/badge/Interactive_Demo-HuggingFace-yellow)](https://huggingface.co/spaces/Respair/Shiki)
@@ -138,8 +164,8 @@ pip install -r requirements.txt
 
 ## Some cool and related projects:
 
-[Kokoro]("https://huggingface.co/spaces/hexgrad/Kokoro-TTS") - a very nice and light weight TTS, based on StyleTTS. supports Japanese and English.
-[VoPho]("https://github.com/ShoukanLabs/VoPho") - a meta phonemizer to rule them all. it will automatically handle any languages with hand-picked high quality phonemizers.
+[Kokoro](https://huggingface.co/spaces/hexgrad/Kokoro-TTS) - a very nice and light weight TTS, based on StyleTTS. supports Japanese and English.
+[VoPho](https://github.com/ShoukanLabs/VoPho) - a meta phonemizer to rule them all. it will automatically handle any languages with hand-picked high quality phonemizers.
 
 
 
