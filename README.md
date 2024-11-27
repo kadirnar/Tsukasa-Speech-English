@@ -1,4 +1,5 @@
 ---
+thumbnail: https://i.postimg.cc/y6gT18Tn/Untitled-design-1.png
 license: cc-by-nc-4.0
 language:
 - ja
@@ -14,7 +15,7 @@ tags:
 - '#StyleTTS2'
 ---
 
-![Logo](https://i.postimg.cc/y6gT18Tn/Untitled-design-1.png)
+<img src="https://i.postimg.cc/y6gT18Tn/Untitled-design-1.png" alt="Logo" style="width:100px; height:auto;">
 
 
 # Tsukasa 司 Speech: Engineering the Naturalness and Rich Expressiveness 
