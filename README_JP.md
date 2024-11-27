@@ -86,11 +86,11 @@ python app_tsuka.py
 
 # Training:
 
-第1段階:
+**第1段階**:
 ```bash
 accelerate launch train_first.py --config_path ./Configs/config.yml
 ```
-第2段階 **(DDPバージョンが動作しないため、現在のバージョンではDPを使用しています。[#7](https://github.com/yl4579/StyleTTS2/issues/7)を参照して、ヘルプをお願いします)**:
+**第2段階**:
 ```bash
 accelerate launch accelerate_train_second.py --config_path ./Configs/config.yml 
 ```
@@ -103,7 +103,7 @@ SLMの共同TrainはマルチGPUでは機能しません。(そもそもこの�
 launch train_first.py --config_path ./Configs/config.yml
 ```
 
-第3段階(Kotodama、プロンプトエンコーディングなど):
+**第3段階**(Kotodama、プロンプトエンコーディングなど):
 *未予定*
 
 
