@@ -69,6 +69,7 @@ Brought to you by:
 - [Cryptowooser](https://github.com/cryptowooser)
 - [Buttercream](https://github.com/korakoe)
 
+special thanks to Yinghao Aaron Li, the Author of StyleTTS which this work is based on top of that. <br> He is one of the most talented Engineers I've ever seen in this field. 
 
 ## Why does it matter?
 
