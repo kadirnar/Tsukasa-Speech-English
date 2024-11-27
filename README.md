@@ -93,7 +93,7 @@ First stage training:
 ```bash
 accelerate launch train_first.py --config_path ./Configs/config.yml
 ```
-Second stage training **(DDP version not working, so the current version uses DP, again see [#7](https://github.com/yl4579/StyleTTS2/issues/7) if you want to help)**:
+Second stage training: 
 ```bash
 accelerate launch accelerate_train_second.py --config_path ./Configs/config.yml 
 ```
