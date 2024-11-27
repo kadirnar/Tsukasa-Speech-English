@@ -84,6 +84,19 @@ There's also a few things that's related to Japanese. such as how we can improve
 
 ## How to do ...
 
+## Pre-requisites
+1. Python >= 3.11
+2. Clone this repository:
+```bash
+git clone https://huggingface.co/Respair/Tsukasa_Speech
+cd Tsukasa_Speech
+```
+3. Install python requirements: 
+```bash
+pip install -r requirements.txt
+```
+
+
 # Inference:
 
 Gradio demo:
@@ -96,16 +109,6 @@ or check the inference notebook. before that, make sure you read the **Important
 # Training:
 
 ## Pre-requisites
-1. Python >= 3.11
-2. Clone this repository:
-```bash
-git clone https://huggingface.co/Respair/Tsukasa_Speech
-cd Tsukasa_Speech
-```
-3. Install python requirements: 
-```bash
-pip install -r requirements.txt
-```
 
 **First stage training**:
 ```bash
