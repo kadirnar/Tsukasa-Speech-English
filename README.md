@@ -69,7 +69,13 @@ There's also a few things that's related to Japanese. such as how we can improve
 ## How to do ...
 
 # Inference:
-check the inference notebook. before that, make sure you read the **Important Notes** section down below.
+
+Gradio demo:
+```bash
+python app_tsumugi.py
+```
+
+or check the inference notebook. before that, make sure you read the **Important Notes** section down below.
 
 # Training:
 
@@ -98,7 +104,7 @@ Third stage training (Kotodama, prompt encoding, etc.):
 
 I can think of a few things that can be improved, not nessarily by me, treat it as some sorts of suggestions:
 
-- [o] changing the decoder (fregrad looks promising)
+- [o] changing the decoder ([fregrad](https://github.com/kaistmm/fregrad) looks promising)
 - [o] retraining the Pitch Extractor using a different algorithm
 - [o] while the quality of non-speech sounds have been improved, it cannot generate an entirely non-speech output, perhaps because of the hard alignement.
 - [o] using the Style encoder as another modality in LLMs, since they have a detailed representation of the tone and expression of a speech (similar to Style-Talker).
