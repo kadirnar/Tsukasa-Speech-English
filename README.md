@@ -13,13 +13,14 @@ tags:
 - '#speech'
 - '#StyleTTS2'
 ---
-# Project Kanade - Tsukasa 司 Speech: Engineering the Naturalness and Rich Expressiveness 
+# Tsukasa 司 Speech: Engineering the Naturalness and Rich Expressiveness 
 
 **tl;dr** : I made a very cool japanese speech model.
 
 Part of a [personal project](https://github.com/Respaired/Project-Kanade), focusing on further advancing Japanese speech field. 
 
-Use the Gradio Demo: [![huggingface](https://img.shields.io/badge/Interactive_Demo-HuggingFace-yellow)](https://huggingface.co/spaces/Respair/Shiki)
+Use the HuggingFace Space for Tsukasa (24khz): [![huggingface](https://img.shields.io/badge/Interactive_Demo-HuggingFace-yellow)](https://huggingface.co/spaces/Respair/Shiki)
+HuggingFace Space for Tsumugi (48khz): [![huggingface](https://img.shields.io/badge/Interactive_Demo-HuggingFace-yellow)](https://huggingface.co/spaces/Respair/Shiki)
 
 Join Shoukan lab's discord server, a comfy place I frequently visit -> [![Discord](https://img.shields.io/discord/1197679063150637117?logo=discord&logoColor=white&label=Join%20our%20Community)](https://discord.gg/JrPSzdcM)
 
