@@ -15,7 +15,7 @@ tags:
 - '#StyleTTS2'
 ---
 
-<img src="https://i.postimg.cc/y6gT18Tn/Untitled-design-1.png" alt="Logo" style="width:100px; height:auto;">
+<img src="https://i.postimg.cc/y6gT18Tn/Untitled-design-1.png" alt="Logo" style="width:300px; height:auto;">
 
 
 # Tsukasa 司 Speech: Engineering the Naturalness and Rich Expressiveness 
