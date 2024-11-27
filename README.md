@@ -80,7 +80,7 @@ There's also a few things that's related to Japanese. such as how we can improve
 
 Gradio demo:
 ```bash
-python app_tsumugi.py
+python app_tsuka.py
 ```
 
 or check the inference notebook. before that, make sure you read the **Important Notes** section down below.
