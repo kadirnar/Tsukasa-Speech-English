@@ -17,7 +17,7 @@ tags:
 
 **tl;dr** : I made a very cool japanese speech model.
 
-Part of a [personal project](https://github.com/Respaired/Project-Kanade), focusing on improving Japanese Deep Learning. 
+Part of a [personal project](https://github.com/Respaired/Project-Kanade), focusing on further advancing Japanese speech field. 
 
 Use the Gradio Demo: [![huggingface](https://img.shields.io/badge/Interactive_Demo-HuggingFace-yellow)](https://huggingface.co/spaces/Respair/Shiki)
 
