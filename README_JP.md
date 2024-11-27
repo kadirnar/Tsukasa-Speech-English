@@ -132,3 +132,31 @@ pip install -r requirements.txt
 4. 2段階目の訓練でNaNが発生:
 
 ***グラジエントが爆発しているのかもしれません。クリッピングを試すか、バッチサイズが大すぎる可能性があります。それでも解決しない場合は、オリジナルのDPスクリプトを使って最初の数エポックを事前訓練することをお勧めします。または、完全にDPを使用してください。***
+
+
+
+
+## Some cool and related projects:
+
+[Kokoro]("https://huggingface.co/spaces/hexgrad/Kokoro-TTS") - a very nice and light weight TTS, based on StyleTTS. supports Japanese and English.
+[VoPho]("https://github.com/ShoukanLabs/VoPho") - a meta phonemizer to rule them all. it will automatically handle any languages with hand-picked high quality phonemizers.
+
+
+
+## References
+- [yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)
+- [NX-AI/xlstm](https://github.com/NX-AI/xlstm)
+- [archinetai/audio-diffusion-pytorch](https://github.com/archinetai/audio-diffusion-pytorch)
+- [jik876/hifi-gan](https://github.com/jik876/hifi-gan)
+- [rishikksh20/iSTFTNet-pytorch](https://github.com/rishikksh20/iSTFTNet-pytorch)
+- [nii-yamagishilab/project-NN-Pytorch-scripts/project/01-nsf](https://github.com/nii-yamagishilab/project-NN-Pytorch-scripts/tree/master/project/01-nsf)
+
+```
+@article{xlstm,
+  title={xLSTM: Extended Long Short-Term Memory},
+  author={Beck, Maximilian and P{\"o}ppel, Korbinian and Spanring, Markus and Auer, Andreas and Prudnikova, Oleksandra and Kopp, Michael and Klambauer, G{\"u}nter and Brandstetter, Johannes and Hochreiter, Sepp},
+  journal={arXiv preprint arXiv:2405.04517},
+  year={2024}
+}
+
+```
