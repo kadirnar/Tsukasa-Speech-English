@@ -31,6 +31,9 @@ tags:
 
 - Shoukan labのDiscordサーバーに参加してください、私がよく訪れる居心地の良い場所です -> [![Discord](https://img.shields.io/discord/1197679063150637117?logo=discord&logoColor=white&label=Join%20our%20Community)](https://discord.gg/JrPSzdcM)
 
+Github's repo:
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Respaired/Tsukasa-Speech)
+
 ## これは何?
 
 *注意*: このモデルは日本語のみをサポートしていますが、Gradioデモでローマ字、またローマ字と普通の日本語をミックスしたテキストを入力することができます。
