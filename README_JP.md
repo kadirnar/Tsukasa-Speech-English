@@ -31,9 +31,6 @@ tags:
 
 - Shoukan labのDiscordサーバーに参加してください、私がよく訪れる居心地の良い場所です -> [![Discord](https://img.shields.io/discord/1197679063150637117?logo=discord&logoColor=white&label=Join%20our%20Community)](https://discord.gg/JrPSzdcM)
 
-Github's repo:
-[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Respaired/Tsukasa-Speech)
-
 ## これは何?
 
 *注意*: このモデルは日本語のみをサポートしていますが、Gradioデモでローマ字、またローマ字と普通の日本語をミックスしたテキストを入力することができます。
@@ -62,12 +59,15 @@ Tsumugi(仮称)は、この データの一部約300時間を使用し、さら�
 また、Kotodamaのインファレンスの最初のモードしかサポートしていないため、ボイスデザインはできません。
 
 
-提供:
+Brought to you by:
 
 - Soshyant (私)
-- Auto Meta (Alignment AI Lab)
-- Cryptowooser
-- Buttercream
+- [Auto Meta](https://github.com/Alignment-Lab-AI)
+- [Cryptowooser](https://github.com/cryptowooser)
+- [Buttercream](https://github.com/korakoe)
+
+このプロジェクトは、StyleTTSの著者であるYinghao Aaron Li氏の成果に基づいています。<br> 彼はこの分野で最も才能あるエンジニアの一人だと思います。
+また、スクリプトのデバッグで協力してくれたKarestoさんとRavenさんにも感謝します。本当に素晴らしい人たちです。
 
 ## なぜ？
 
@@ -154,22 +154,32 @@ pip install -r requirements.txt
 
 ***入力が1回の推論に対して長すぎます。Longform推論機能を使用してください。これは特に、Tsumugi(仮称)チェックポイントでは問題になります。mLSTMレイヤーのコンテキスト長が512に制限されているため、Longform機能を使用しない限り、約10秒以上の音声を生成できません。ただし、他のチェックポイントではこれは問題にはなりません。Longform アルゴリズムのおかげで、出力の長さに理論的な制限はありません。***
 
-3. 短い入力が印象的ではない:
+4. 短い入力が印象的ではない:
 
 ***2で述べたことがすべて当てはまります。スタイルベクトルが適切かどうかを確認してください。ただし、一般的に非常に短い入力の使用は推奨されません。***
 
-4. 2段階目の訓練でNaNが発生:
+5. 2段階目の訓練でNaNが発生:
 
 ***グラジエントが爆発しているのかもしれません。クリッピングを試すか、バッチサイズが大すぎる可能性があります。それでも解決しない場合は、オリジナルのDPスクリプトを使って最初の数エポックを事前訓練することをお勧めします。または、完全にDPを使用してください。***
 
+6. Kotodam inferenceにあるスピーカーさんの名前について；
+
+   
+***全部ランダムでマッピングされていますので、実際の人物やロールなどとは一切関係していません。***
+   
+7. ご質問があった場合は、遠慮なく教えてください。
+```
+saoshiant@protonmail.com
+```
+Discordも可能です。
 
 
 
 ## Some cool and related projects:
 
-[Kokoro](https://huggingface.co/spaces/hexgrad/Kokoro-TTS) - a very nice and light weight TTS, based on StyleTTS. supports Japanese and English.
-[VoPho](https://github.com/ShoukanLabs/VoPho) - a meta phonemizer to rule them all. it will automatically handle any languages with hand-picked high quality phonemizers. <br>
-I will add more later
+[Kokoro](https://huggingface.co/spaces/hexgrad/Kokoro-TTS) - a very nice and light weight TTS, based on StyleTTS. supports Japanese and English.<br>
+[VoPho](https://github.com/ShoukanLabs/VoPho) - a meta phonemizer to rule them all. it will automatically handle any languages with hand-picked high quality phonemizers.<br>
+
 
 
 ## References
@@ -179,7 +189,7 @@ I will add more later
 - [jik876/hifi-gan](https://github.com/jik876/hifi-gan)
 - [rishikksh20/iSTFTNet-pytorch](https://github.com/rishikksh20/iSTFTNet-pytorch)
 - [nii-yamagishilab/project-NN-Pytorch-scripts/project/01-nsf](https://github.com/nii-yamagishilab/project-NN-Pytorch-scripts/tree/master/project/01-nsf)
-- [litain's Moe Speech](https://huggingface.co/datasets/litagin/moe-speech)
+
 ```
 @article{xlstm,
   title={xLSTM: Extended Long Short-Term Memory},
