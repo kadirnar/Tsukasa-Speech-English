@@ -65,9 +65,10 @@ it also only supports the first mode of Kotodama's inference, which means no voi
 Brought to you by:
 
 - Soshyant (me)
-- Auto Meta (Alignment AI Lab)
-- Cryptowooser
-- Buttercream
+- [Auto Meta](https://github.com/Alignment-Lab-AI)
+- [Cryptowooser](https://github.com/cryptowooser)
+- [Buttercream](https://github.com/korakoe)
+
 
 ## Why does it matter?
 
@@ -89,11 +90,11 @@ or check the inference notebook. before that, make sure you read the **Important
 
 # Training:
 
-First stage training:
+**First stage training**:
 ```bash
 accelerate launch train_first.py --config_path ./Configs/config.yml
 ```
-Second stage training: 
+**Second stage training**:
 ```bash
 accelerate launch accelerate_train_second.py --config_path ./Configs/config.yml 
 ```
@@ -106,9 +107,9 @@ or:
 launch train_first.py --config_path ./Configs/config.yml
 ```
 
-Third stage training (Kotodama, prompt encoding, etc.):
+**Third stage training** (Kotodama, prompt encoding, etc.):
 ```
-needs some cleaning, maybe not now.
+not planned right now, due to some constraints, but feel free to replicate.
 ```
 
 
@@ -125,8 +126,8 @@ I can think of a few things that can be improved, not nessarily by me, treat it 
 1. Python >= 3.11
 2. Clone this repository:
 ```bash
-git clone https://github.com/yl4579/StyleTTS2.git
-cd StyleTTS2
+git clone https://huggingface.co/Respair/Tsukasa_Speech
+cd Tsukasa_Speech
 ```
 3. Install python requirements: 
 ```bash
@@ -156,22 +157,30 @@ pip install -r requirements.txt
 
 ***your input is too long for a single inference run. use the Longform inference function. this is particularly challenging with the Tsumugi (placeholder) checkpoint as the context length of the mLSTM layer is capped at 512, meaning you cannot generate more than ~10 seconds of audio without relying on the Longform function. but this shouldn't be an issue with the other checkpoint. all in all, this should not be a serious problem. as there's no theoretical limit to the output thanks to the Longform algoirthm.***
 
-3. short inputs sound un-impressive:
+4. short inputs sound un-impressive:
 
 ***everything said in 2, applies here. make sure your style vector is suitable for that. but generally it's not recommended to use a very short input.***
 
-4. Nans in 2nd Stage:
+5. About the Names used in kotodama inference:
+***They are all random names mapped to the ids. they have no relation to the speaker, their role in a series or anything. there are hundreds of names so I should provide a metadata later. though the model should work with any random names thrown at it.***
+
+6. Nans in 2nd Stage:
 
 ***Your gradients are probably exploding. try clipping or your batch size is way too high. if that didn't work, feel free to do the first few epochs which is the pre-training stage, using the original DP script. or use DP entriely.***
 
-4. Supporting English (or other languages):
+7. Supporting English (or other languages):
 
 ***There is a wide gap between English and other languages, so I mostly focus on non-English projects. but the good folks at Shoukan labs are trying to train a multilingual model with English included. however, if i ever do myself, it'll be focused on something specific (let's say accents).***
 
+8. Any questions?
+```email
+saoshiant@protonmail.com
+```
+or simply DM me on discord.
 
 ## Some cool projects:
 
-[Kokoro]("https://huggingface.co/spaces/hexgrad/Kokoro-TTS") - a very nice and light weight TTS, based on StyleTTS. supports Japanese and English.
+[Kokoro]("https://huggingface.co/spaces/hexgrad/Kokoro-TTS") - a very nice and light weight TTS, based on StyleTTS. supports Japanese and English.<br>
 [VoPho]("https://github.com/ShoukanLabs/VoPho") - a meta phonemizer to rule them all. it will automatically handle any languages with hand-picked high quality phonemizers.
 
 
