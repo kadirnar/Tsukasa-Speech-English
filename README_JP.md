@@ -165,8 +165,8 @@ pip install -r requirements.txt
 ## Some cool and related projects:
 
 [Kokoro](https://huggingface.co/spaces/hexgrad/Kokoro-TTS) - a very nice and light weight TTS, based on StyleTTS. supports Japanese and English.
-[VoPho](https://github.com/ShoukanLabs/VoPho) - a meta phonemizer to rule them all. it will automatically handle any languages with hand-picked high quality phonemizers.
-
+[VoPho](https://github.com/ShoukanLabs/VoPho) - a meta phonemizer to rule them all. it will automatically handle any languages with hand-picked high quality phonemizers. <br>
+I will add more later
 
 
 ## References
@@ -176,7 +176,7 @@ pip install -r requirements.txt
 - [jik876/hifi-gan](https://github.com/jik876/hifi-gan)
 - [rishikksh20/iSTFTNet-pytorch](https://github.com/rishikksh20/iSTFTNet-pytorch)
 - [nii-yamagishilab/project-NN-Pytorch-scripts/project/01-nsf](https://github.com/nii-yamagishilab/project-NN-Pytorch-scripts/tree/master/project/01-nsf)
-
+- [litain's Moe Speech](https://huggingface.co/datasets/litagin/moe-speech)
 ```
 @article{xlstm,
   title={xLSTM: Extended Long Short-Term Memory},
