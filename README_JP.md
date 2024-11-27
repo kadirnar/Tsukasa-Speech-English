@@ -1,5 +1,3 @@
-**要約**: 私は非常に素晴らしい日本語音声生成モデルを作成しました。
-
 [個人プロジェクト](https://github.com/Respaired/Project-Kanade)の一部で、日本語Speech分野のさらなる発展に焦点を当てています。 
 
 - **Tsukasa** (24kHz)のHuggingFaceスペースを使用してください: [![huggingface](https://img.shields.io/badge/Interactive_Demo-HuggingFace-yellow)](https://huggingface.co/spaces/Respair/Shiki)
