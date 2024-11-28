@@ -22,7 +22,7 @@ tags:
 
 # Tsukasa 司 Speech: Engineering the Naturalness and Rich Expressiveness 
 
-**tl;dr** : I made a very cool japanese speech generation model.
+**tl;dr** : made a very cool japanese speech generation net.
 
 日本語のモデルカードは[こちら](https://huggingface.co/Respair/Tsukasa_Speech/blob/main/README_JP.md)。
 
