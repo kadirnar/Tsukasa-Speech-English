@@ -205,7 +205,6 @@ or simply DM me on discord.
 - [jik876/hifi-gan](https://github.com/jik876/hifi-gan)
 - [rishikksh20/iSTFTNet-pytorch](https://github.com/rishikksh20/iSTFTNet-pytorch)
 - [nii-yamagishilab/project-NN-Pytorch-scripts/project/01-nsf](https://github.com/nii-yamagishilab/project-NN-Pytorch-scripts/tree/master/project/01-nsf)
-- [litain's Moe Speech](https://huggingface.co/datasets/litagin/moe-speech)
 ```
 @article{xlstm,
   title={xLSTM: Extended Long Short-Term Memory},
