@@ -154,6 +154,8 @@ I can think of a few things that can be improved, not nessarily by me, treat it 
 
 ### Important Notes
 
+Please Check [here](https://github.com/Respaired/Tsukasa-Speech/blob/main/important_notes.md).
+
 Any questions?
 ```email
 saoshiant@protonmail.com
