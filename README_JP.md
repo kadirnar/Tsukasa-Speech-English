@@ -144,7 +144,7 @@ pip install -r requirements.txt
 
 [こちら](https://github.com/Respaired/Tsukasa-Speech/blob/main/%E9%87%8D%E8%A6%81%E3%81%AA%E3%83%A1%E3%83%A2.md)を読んでください。
    
-7. ご質問があった場合は、遠慮なく教えてください。
+ご質問があった場合は、遠慮なく教えてください。
 ```
 saoshiant@protonmail.com
 ```
