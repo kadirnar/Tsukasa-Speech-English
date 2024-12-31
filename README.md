@@ -24,6 +24,8 @@ tags:
 
 *tl;dr* : made a very cool japanese speech generation net.
 
+**I mainly update the Hugging Face's repository, please check there. especially if you want to fine-tune.**
+
 日本語のモデルカードは[こちら](https://huggingface.co/Respair/Tsukasa_Speech/blob/main/README_JP.md)。
 
 Part of a [personal project](https://github.com/Respaired/Project-Kanade), focusing on further advancing Japanese speech field. 
