@@ -26,6 +26,9 @@ tags:
 
 **I mainly update the Hugging Face's repository, please check there. especially if you want to fine-tune.**
 
+Try [chatting with Aira](https://huggingface.co/spaces/Respair/Chatting_with_Aira), a mini-project I did by using various Tech and algorithms, including Tsukasa. (maybe not very optimized, but hey, it works!)
+
+
 日本語のモデルカードは[こちら](https://huggingface.co/Respair/Tsukasa_Speech/blob/main/README_JP.md)。
 
 Part of a [personal project](https://github.com/Respaired/Project-Kanade), focusing on further advancing Japanese speech field. 
