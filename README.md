@@ -43,7 +43,7 @@ Github's repo:
 
 ## What is this?
 
-*Note*: This model only supports the Japanese language; but you can feed it Romaji if you use the Gradio demo.
+*Note*: This model only supports the Japanese language; ~~but you can feed it Romaji if you use the Gradio demo.~~ (no longer, due to resource constraints)
 
 This is a speech generation network, aimed at maximizing the expressiveness and Controllability of the generated speech. at its core it uses [StyleTTS 2](https://github.com/yl4579/StyleTTS2)'s architecture with the following changes:
 
