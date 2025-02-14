@@ -424,7 +424,7 @@ def main(config_path):
                                       features=ref,  # reference from the same speaker as the embedding
                                       embedding_mask_proba=0.1,
                                       num_steps=num_steps).squeeze(1)
-                    loss_diff = model.diffusion(s_trg.unsqueeze(1), embedding=bert_dur, features=ref).mean()  # EDM loss
+                    loss_diff = model.diffusion.module.diffusion(s_trg.unsqueeze(1), embedding=bert_dur, features=ref).mean()  # EDM loss
                     loss_sty = F.l1_loss(s_preds, s_trg.detach())  # style reconstruction loss
                 else:
                     s_preds = sampler(noise=torch.randn_like(s_trg).unsqueeze(1).to(device),
