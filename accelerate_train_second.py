@@ -515,6 +515,10 @@ def main(config_path):
                 optimizer.zero_grad()
                 d_loss = dl(wav.detach(), y_rec.detach()).mean()
                 accelerator.backward(d_loss)
+                
+                accelerator.clip_grad_norm_(model.msd.parameters(), max_norm=2.0)
+                accelerator.clip_grad_norm_(model.mpd.parameters(), max_norm=2.0)
+                
                 optimizer.step('msd')
                 optimizer.step('mpd')
             else:
