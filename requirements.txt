@@ -9,6 +9,7 @@ pyyaml
 nltk
 matplotlib
 unidic-lite
+torch<2.6
 xlstm
 fugashi
 cutlet
