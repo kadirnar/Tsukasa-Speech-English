@@ -14,7 +14,7 @@ xlstm
 fugashi
 cutlet
 accelerate
-transformers
+transformers<4.50.*
 einops
 einops-exts
 tqdm
