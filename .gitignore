@@ -2,3 +2,4 @@
 __pycache__
 Data/train_list.txt
 Data/val_list.txt
+Models/Style_English_v00/*
