@@ -424,7 +424,7 @@ def main(config_path):
                                       features=ref,  # reference from the same speaker as the embedding
                                       embedding_mask_proba=0.1,
                                       num_steps=num_steps).squeeze(1)
-                    loss_diff = model.diffusion.module.diffusion(s_trg.unsqueeze(1), embedding=bert_dur, features=ref).mean()  # EDM loss
+                    loss_diff = model.diffusion.module.diffusion(s_trg.unsqueeze(1), embedding=bert_dur, features=ref).mean() # EDM loss
                     loss_sty = F.l1_loss(s_preds, s_trg.detach())  # style reconstruction loss
                 else:
                     s_preds = sampler(noise=torch.randn_like(s_trg).unsqueeze(1).to(device),
@@ -515,9 +515,11 @@ def main(config_path):
                 optimizer.zero_grad()
                 d_loss = dl(wav.detach(), y_rec.detach()).mean()
                 accelerator.backward(d_loss)
-                
+
+                # the biggest culprit of causing NaNs in DDP training!
                 accelerator.clip_grad_norm_(model.msd.parameters(), max_norm=2.0)
                 accelerator.clip_grad_norm_(model.mpd.parameters(), max_norm=2.0)
+
                 
                 optimizer.step('msd')
                 optimizer.step('mpd')

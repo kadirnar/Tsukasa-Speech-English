@@ -1,5 +1,5 @@
 INTROTXT = """# 
-Repo -> [Hugging Face - 🤗](https://huggingface.co/Respair/Project_Kanade_SpeechModel)
+Repo -> [Hugging Face - 🤗](https://huggingface.co/Respair/Tsukasa_Speech/edit/main/app_tsuka.py)
 This space uses Tsukasa (24khz).
 **Check the Read me tabs down below.** <br>
 Enjoy!
@@ -414,15 +414,8 @@ over the generation process, which means it's easy to inadvertently produce unim
 
 <p>
 <b>Kotodama</b> and the <b>Diffusion sampler</b> can significantly help guide the generation towards<br>
-something that aligns with your input, but they aren't foolproof.
-</p>
-
-<p>
-The model's peak performance is achieved when the Diffusion sampler and Kotodama work seamlessly together.<br>
-However, we won't see that level of performance here because this checkpoint is somewhat undertrained<br>
-due to my time and resource constraints. (Tsumugi should be better in this regard, <br>
-albeit if the diffusion works at all on your hardware.) <br>
-Hopefully, you can further fine-tune this model (or train from scratch) to achieve even better results! 
+something that aligns with your input, but they aren't foolproof. turn off the diffusion sampler or <br>
+set it to very low values if it doesn't sound good to you. <br>
 </p>
 
 <p>
@@ -526,15 +519,9 @@ notes_jp = """
 
 <p>
 <b>Kotodama</b>と<b>Diffusionサンプラー</b>は、入力に沿ったものを生成するための大きな助けとなりますが、<br>
-万全というわけではありません。
+万全というわけではありません。良いアウトプットが出ない場合は、ディフュージョンサンプラーをオフにするか、非常に低い値に設定してください。
 </p>
 
-<p>
-モデルの最高性能は、DiffusionサンプラーとKotodamaがシームレスに連携することで達成されます。しかし、<br>
-このチェックポイントは時間とリソースの制約からややTrain不足であるため、そのレベルの性能はここでは見られません。<br>
-(この件について、「紬」のチェックポイントの方がいいかもしれません。でもまぁ、みなさんのハードに互換性があればね。）<br>
-おそらく、このモデルをさらにFinetuningする（または最初からTrainする）ことで、より良い結果が得られるでしょう。
-</p>
 
 _____________________________________________<br>\n
 <strong>音声デザインとプロンプトに関する有用なメモ:</strong><br>

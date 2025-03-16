@@ -16,7 +16,6 @@ from Utils.JDC.model import JDCNet
 
 from transformers import AutoModelForSequenceClassification, PreTrainedModel, AutoConfig, AutoModel, AutoTokenizer
 
-from Modules.KotoDama_sampler import KotoDama_Prompt, KotoDama_Text
 from Modules.diffusion.sampler import KDiffusion, LogNormalDistribution
 from Modules.diffusion.modules import Transformer1d, StyleTransformer1d
 from Modules.diffusion.diffusion import AudioDiffusionConditional
@@ -826,32 +825,6 @@ def load_F0_models(path):
     
     return F0_model
 
-
-def load_KotoDama_Prompter(path, cfg=None, model_ckpt="ku-nlp/deberta-v3-base-japanese"):
-
-    cfg = AutoConfig.from_pretrained(model_ckpt)
-    cfg.update({
-    "num_labels": 256
-    })
-
-    kotodama_prompt = KotoDama_Prompt.from_pretrained(path, config=cfg)
-    
-    return kotodama_prompt
-
-
-def load_KotoDama_TextSampler(path, cfg=None, model_ckpt="line-corporation/line-distilbert-base-japanese"):
-    
-    cfg = AutoConfig.from_pretrained(model_ckpt)
-    cfg.update({
-    "num_labels": 256
-    })
-
-    kotodama_sampler = KotoDama_Text.from_pretrained(path, config=cfg)
-    
-    return kotodama_sampler
-
-
-
 # def reconstruction_head(path): # didn't make a lot of difference, disabling it for now until i find / train a better net
     
 #     recon_model = DiffusionUpsampler(
@@ -902,7 +875,7 @@ def load_ASR_models(ASR_MODEL_PATH, ASR_MODEL_CONFIG):
 
     return asr_model
 
-def build_model(args, text_aligner, pitch_extractor, bert, KotoDama_Prompt, KotoDama_Text):
+def build_model(args, text_aligner, pitch_extractor, bert):
     assert args.decoder.type in ['istftnet', 'hifigan'], 'Decoder type unknown'
     
     if args.decoder.type == "istftnet":
@@ -981,9 +954,6 @@ def build_model(args, text_aligner, pitch_extractor, bert, KotoDama_Prompt, Koto
         
             # slm discriminator head
             wd = WavLMDiscriminator(args.slm.hidden, args.slm.nlayers, args.slm.initial_channel),
-            
-            KotoDama_Prompt = KotoDama_Prompt,
-            KotoDama_Text = KotoDama_Text,
             
             # recon_diff = recon_diff,
 

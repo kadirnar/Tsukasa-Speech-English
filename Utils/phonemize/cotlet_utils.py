@@ -27,6 +27,7 @@ formal_to_informal3 = {
      "＄":"どる",
      "＃":"はっしゅたぐ",
      "何が":"なにが",
+     "何に":"なにに",
 
      "何も":"なにも",
      "何か":"なにか",
@@ -137,8 +138,9 @@ mapper = dict([
 
     ("その節","そのせつ"),
 
-    ("何し","なにし"),
+    ("何しに","なにしに"),
     ("何する","なにする"),
+    # ("何しよう","なにしよう"),
 
     ("心さん","しんさん"),
     ("心ちゃん","しんちゃん"),
@@ -499,6 +501,15 @@ def hira2ipa(text, roma_mapper=roma_mapper):
     return ''.join(transformed_text)
 
 import re
+
+def replace_ending(text):
+    # Pattern explanation:
+    # (?<!naɴ)(?<!nan)  - negative lookbehind to ensure "naɴ" or "nan" doesn't precede
+    # niɴ                - the target ending to replace
+    # $                  - end of string
+    pattern = r'(?<!naɴ)(?<!nan)niɴ$'
+    return re.sub(pattern, 'dʑiɴ', text)
+
 
 
 k_mapper = dict([
@@ -980,12 +991,13 @@ spaces = dict([
     ("niːɕiki","ni iɕiki"),
     ("anitɕaɴ","niːtɕaɴ"),
     ("daiːtɕi","dai itɕi"),
-    ("niːta","ni ita"),
-    ("niːrɯ","ni irɯ"),
+    (" niːta"," ni ita"),
+    (" niːrɯ"," ni irɯ"),
     ("a—","aː"),
-    ("waːis","wa ais"),
-    ("waːiɕ","wa aiɕ"),
-    ("aːt","a at"),
+    ("iːki","i iki"),
+    (" waːis"," wa ais"),
+    (" waːiɕ"," wa aiɕ"),
+    # ("aːt","a at"),
     ("waːʔ", "wa aʔ"),
     
     ("naɴ sono","nani sono"),
@@ -1002,16 +1014,103 @@ spaces = dict([
     ("niːw","ni iw"),
     ("niːkɯ","ni ikɯ"),
     ("de—","de e"),
-    ("aːj","aː aj"),
-    ("aːɽ","a aɽ"),
-    ("aːr","a ar"),
+    (" aːj"," aː aj"),
+    (" aːɽ"," a aɽ"),
+    (" aːr"," a ar"),
+    (" gaːn"," ga an"),
+
+    (" gaːɽɯ "," ga aɽɯ "),
+    (" waːɽɯ "," wa aɽɯ "),
+    (" gaːrɯ "," ga arɯ "),
+    ("gaːrɯɕi","ga arɯɕi"),
+    ("gaːrɯnaɽa","ga arɯ naɽa"),
+    ("gaːrɯɴ","ga arɯɴ"),
+    ("gaːreba","ga areba"),
+    ("gaːrɯkedo","ga arɯ kedo"),
+    ("gaːrinagaɽa","ga ari nagaɽa"),
+    ("gaːrɯ wa","ga arɯ wa"),
+    ("gaːrɯwa","ga arɯ wa"),
+    (" waːrɯ "," wa arɯ "),
+    ("waːmaɽi ","wa amaɽi "),
+    
+    (" gaːɽi"," ga aɽi"),
+    (" waːɽi"," wa aɽi"),
+    (" gaːri"," ga ari"),
+    (" waːri"," wa ari"),
+
+
+    (" gaːɽe"," ga aɽe"),
+    (" waːɽe"," wa aɽe"),
+    (" gaːre"," ga are"),
+    (" waːre"," wa are"),
+
+
+    (" gaːʔta"," ga aʔta"),
+    (" waːʔta"," wa aʔta"),
+    
+    ("gaːʔmaɽi","ga aʔmaɽi"),
+    ("waːʔmaɽi","wa aʔmaɽi"),
+    
+    ("gaːsakaʔta","ga asakaʔta"),
+    ("waːsakaʔta","wa asakaʔta"),
+    
+    (" waːme "," wa ame "),
+    (" gaːme "," ga ame "),
+    
+    ("aɽaːɽa","aɽa aɽa"),
+    ("waːi rʲoɯ","wa aiɽa"),
+    ("gaːi rʲoɯ","ga aiɽa"),
+    ("gaːi ","ga ai "),
+    ("ai rʲoɯ", "aiɽa"),
+    ("ai joʔte","aiɽaʔte"),
+    ("arɯihaːi rʲoɯ","arɯi wa aiɽa"),
+    ("rʲoɯ ɕiki","joɕiki"),
+    ("waːkarɯi","wa akarɯi"),
+    ("gaːkarɯi","ga akarɯi"),
+    
+    ("waːi o","wa ai o"),
+    ("madaːtama","mada atama"),
+    ("hahasaɴ","kaːsaɴ"),
+    ("ohahasaɴ","okaːsaɴ"),
+    ("hahatɕaɴ","kaːtɕaɴ"),
+    ("ohahatɕaɴ","okaːtɕaɴ"),
+    
+    ("nani mo ka mo","nanimokamo"),
+    
+    (" nihon "," niʔpon "),
+    ("niʔponniɴ","nihondʑiɴ"),
+    ("arɽaːfɯ","arɽaː"),
+    
     ("ɕiːk ","ɕi ik"),
-    ("ɕijoː neɴ","ɕoɯneɴ")
+    ("ɕijoː neɴ","ɕoɯneɴ"),
+    ("aːna","a ana"),
+    ("naɴ ɕijoɯ","nani ɕijoɯ"),
+    ("hana ni sɯrɯ","wa nani sɯrɯ"),
+    ("naɴ ɕite","nani ɕite"),
+    
+    ("hatsɯ taimeɴ","ɕotaimeɴ"),
+    ("soŋkei go","soŋkeigo"),
+    (" go ","go "),
+    (" keiː "," kei i "),
+    (" kaŋgae hoɯ ","kaŋgaekata"),
+    ("tomete kɯdasai","jamete kɯdasai"),
+    (" bɯkaikedo"," fɯkaikedo"),
     
 
 ])
 
 
+def fix_wagas(text):
+
+    pattern = r'\b(gaːɽɯ|waːɽɯ|gaːrɯ|waːrɯ|gaːɽi|waːɽi|gaːri|waːri)\b(?!\s*\w)'
+
+    def replace_match(match):
+        word = match.group(1)
+        if 'ː' in word:
+            return word.replace('ː', ' a')
+        return word
+    
+    return re.sub(pattern, replace_match, text)
 
 def random_space_fix(text):
     orig = text
@@ -1019,4 +1118,6 @@ def random_space_fix(text):
     for k, v in spaces.items():
         text = text.replace(k, v)
         
-    return text
+    return fix_wagas(text)
+
+    

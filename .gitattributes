@@ -42,3 +42,6 @@ reference_sample_wavs/sample_ref01.wav filter=lfs diff=lfs merge=lfs -text
 reference_sample_wavs/sample_ref02.wav filter=lfs diff=lfs merge=lfs -text
 reference_sample_wavs/shiki_fine05.wav filter=lfs diff=lfs merge=lfs -text
 reference_sample_wavs/syuukovoice_200918_3_01.wav filter=lfs diff=lfs merge=lfs -text
+reference_sample_wavs/audio_ref.wav filter=lfs diff=lfs merge=lfs -text
+OOD_LargeScale_.csv filter=lfs diff=lfs merge=lfs -text
+__pycache__ filter=lfs diff=lfs merge=lfs -text
