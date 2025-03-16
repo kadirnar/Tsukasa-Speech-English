@@ -257,7 +257,7 @@ def main(config_path):
     wl = wl.eval()
 
     sampler = DiffusionSampler(
-        model.diffusion.module.diffusion,
+        model.diffusion.diffusion,
         sampler=ADPM2Sampler(),
         sigma_schedule=KarrasSchedule(sigma_min=0.0001, sigma_max=3.0, rho=9.0),  # empirical parameters
         clamp=False
@@ -300,7 +300,7 @@ def main(config_path):
         model, optimizer, start_epoch, iters = load_checkpoint(model, optimizer, config['pretrained_model'],
                                                                load_only_params=config.get('load_only_params', True))
 
-    n_down = model.text_aligner.module.n_down
+    n_down = model.text_aligner.n_down
 
     # for k in model:
     #     model[k] = accelerator.prepare(model[k])
@@ -413,9 +413,9 @@ def main(config_path):
                 num_steps = np.random.randint(3, 5)
 
                 if model_params.diffusion.dist.estimate_sigma_data:
-                    model.diffusion.module.diffusion.sigma_data = s_trg.std(
+                    model.diffusion.diffusion.sigma_data = s_trg.std(
                         axis=-1).mean().item()  # batch-wise std estimation
-                    running_std.append(model.diffusion.module.diffusion.sigma_data)
+                    running_std.append(model.diffusion.diffusion.sigma_data)
 
                 if multispeaker:
                     s_preds = sampler(noise=torch.randn_like(s_trg).unsqueeze(1).to(device),
@@ -424,7 +424,7 @@ def main(config_path):
                                       features=ref,  # reference from the same speaker as the embedding
                                       embedding_mask_proba=0.1,
                                       num_steps=num_steps).squeeze(1)
-                    loss_diff = model.diffusion.module.diffusion(s_trg.unsqueeze(1), embedding=bert_dur, features=ref).mean() # EDM loss
+                    loss_diff = model.diffusion.diffusion(s_trg.unsqueeze(1), embedding=bert_dur, features=ref).mean() # EDM loss
                     loss_sty = F.l1_loss(s_preds, s_trg.detach())  # style reconstruction loss
                 else:
                     s_preds = sampler(noise=torch.randn_like(s_trg).unsqueeze(1).to(device),
@@ -432,7 +432,7 @@ def main(config_path):
                                       embedding_scale=1,
                                       embedding_mask_proba=0.1,
                                       num_steps=num_steps).squeeze(1)
-                    loss_diff = model.diffusion.module.diffusion(s_trg.unsqueeze(1),
+                    loss_diff = model.diffusion.diffusion(s_trg.unsqueeze(1),
                                                                  embedding=bert_dur).mean()  # EDM loss
                     loss_sty = F.l1_loss(s_preds, s_trg.detach())  # style reconstruction loss
                 # print(loss_sty)
@@ -490,7 +490,7 @@ def main(config_path):
                 F0_real, _, F0 = model.pitch_extractor(gt.unsqueeze(1))
                 F0 = F0.reshape(F0.shape[0], F0.shape[1] * 2, F0.shape[2])
 
-                asr_real = model.text_aligner.module.get_feature(gt)
+                asr_real = model.text_aligner.get_feature(gt)
 
                 N_real = log_norm(gt.unsqueeze(1)).squeeze(1)
 
